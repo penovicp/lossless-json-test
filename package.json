@@ -1,0 +1,16 @@
+{
+  "name": "lossless-json-test",
+  "version": "0.0.0",
+  "main": "index.js",
+  "license": "ISC",
+  "scripts": {
+    "start": "node cjs && node esm",
+    "build": "npm run build:cjs && npm run build:esm",
+    "build:cjs": "tsc --target esnext --module nodenext --outDir cjs index.ts",
+    "build:esm": "tsc --target esnext --module esnext --moduleResolution nodenext --outDir esm index.ts"
+  },
+  "dependencies": {
+    "lossless-json": "^2.0.10",
+    "typescript": "^5.1.6"
+  }
+}
